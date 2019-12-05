@@ -1,6 +1,6 @@
 <?php
 // Déclaration d'une variable month. Array est pour déclarer un tableau
-$month=array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
+$months=array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', 'Août', 'Septembre', 'Octobre', 'Novembre', 'Décembre');
 ?>
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
@@ -10,13 +10,11 @@ $month=array('Janvier', 'Février', 'Mars', 'Avril', 'Mai', 'Juin', 'Juillet', '
 </head>
 <body>
   <?php
-  // Déclaratioon d'un boucle "for" pour un tableau.
-  // Numéro de 0 à 12 pour le nombre de mois dans l'année
-  // numéro++ pour la boucle
-  for ($numero = 0; $numero < 12; $numero++){
+  // Pour chaque éléments du tableau months on affiche ces élements
+  foreach ($months as $element){
     ?>
-    <!-- Affichage de la variable month et entre crochet la variable numero-->
-    <p><?php echo $month[$numero]; ?></p>
-  <?php } ?>
+    <!-- Création d'un paragraphe pour que les mois soient les uns en dessous des autres -->
+    <p><?php echo $element; ?></p>
+  <?php }; ?>
 </body>
 </html>
